@@ -128,8 +128,6 @@ contract getVTokenPremium1155_Unit_Test is NFTXVaultFactory_Unit_Test {
         for (uint256 i; i < depositAmounts.length; i++) {
             depositAmounts[i] = bound(depositAmounts[i], 1, type(uint64).max);
 
-            totalDeposited += depositAmounts[i];
-
             nft1155.mint(tokenId, depositAmounts[i]);
 
             uint256[] memory tokenIds = new uint256[](1);
